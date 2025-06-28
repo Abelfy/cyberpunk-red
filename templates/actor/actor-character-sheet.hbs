@@ -1,0 +1,134 @@
+<form class="{{cssClass}} {{actor.type}} flexcol" autocomplete="off">
+  <nav class="sheet-tabs tabs" data-group="primary">
+    {{!-- Default tab is specified in actor-sheet.mjs --}}
+    <a class="item" data-tab="features">Features</a>
+    <a class="item" data-tab="equipment">Equipement</a>
+    <a class="item" data-tab="items">Cyber Matos</a>
+  </nav>
+  <div class="tab sheet" data-group="primary" data-tab="features">
+    <div class="header">
+      <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" width="200" height="200" />
+      <label for="actor.name">Pseudo</label><input type="text" name="actor.name" value="{{actor.name}}" placeholder="Pseudo">
+      <label for="actor.name">Rôle</label><input type="text" name="actor.role" value="{{actor.role}}" placeholder="Rôle">
+      <label>Capacité de rôle</label><input type="text">
+      <label>Notes</label><textarea rows="6"></textarea>
+      <label>Humanité</label><input type="text">
+    </div>
+
+    <div class="attributes">
+      {{#each system.abilities as |ability key|}}
+      {{key}}
+      <div class="ability flexrow flex-group-center">
+        <label for="system.abilities.{{key}}.value" class="resource-label rollable flexlarge align-left"
+          data-roll="d10x=10+@abilities.{{key}}.mod" data-label="{{localize (lookup @root.config.abilities key)}}">{{localize
+          (lookup @root.config.abilities
+          key)}}</label>
+        <input type="text" name="system.abilities.{{key}}.value" value="{{ability.value}}" data-dtype="Number" />
+        {{!-- <span class="ability-mod rollable" data-roll="d10+@abilities.{{key}}.mod"
+          data-label="{{localize (lookup @root.config.caract key)}}">{{numberFormat ability.mod decimals=0
+          sign=true}}</span> --}}
+      </div>
+      {{/each}}
+
+    </div>
+
+    <div class="skills">
+      
+      
+      <div>
+
+        {{#each skills as | category key|}}
+         <table>
+          <tr>
+            <th>{{localize (lookup @root key)}}</th>
+            <th>NIV</th>
+            <th>CARAC</th>
+            <th>BASE</th>
+          </tr>
+           {{!-- {{#each skills as |s|}}
+          <tr>
+            <td><span class="rollable" data-roll="d10+@abilities.{{key}}.mod">{{localize (lookup @root.config.abilities key)}}{{s.title}}<b>({{s.indexedOn}})</b></span></td>
+            <td><input type="text" name="system.skills.{{s.indexedOn}}.lvl" value="{{s.lvl}}" data-dtype="Number"></td>
+            <td></td>
+            <td><input type="text" name="system.skills.{{s.indexedOn}}.base" value="{{s.base}}" data-dtype="Number">
+            </td>
+          </tr>
+          {{/each}}  --}}
+        </table> 
+        {{/each}}
+      </div>
+    </div>
+
+
+    <div class="health">
+      <div class="resource flex-group-center">
+        <label for="system.health.value" class="resource-label">Points de santé</label>
+        <div class="resource-content flexrow flex-center flex-between">
+          <input type="text" name="system.health.value" value="{{system.health.value}}" data-dtype="Number" />
+          <span> / </span>
+          <input type="text" name="system.health.max" value="{{system.health.max}}" data-dtype="Number" />
+        </div>
+      </div>
+      <label>Blessure grave</label><input type="text">
+      <label>Blessures critiques</label><input type="text">
+      <label>Addictions</label><input type="text">
+    </div>
+    <div class="stuff">
+
+      <h2>Armes & Armure</h2>
+
+      <table>
+        <tr>
+          <th>Arme</th>
+          <th>Dégâts</th>
+          <th>Mun</th>
+          <th>Att/Round</th>
+          <th>Notes</th>
+        </tr>
+        <tr>
+          <td><input></td>
+          <td><input></td>
+          <td><input></td>
+          <td><input></td>
+          <td><input></td>
+        </tr>
+      </table>
+
+      <h3>Armure</h3>
+      <table>
+        <tr>
+          <th>Zone</th>
+          <th>PA</th>
+          <th>Pénalité</th>
+        </tr>
+        <tr>
+          <td>Tête</td>
+          <td><input></td>
+          <td><input></td>
+        </tr>
+        <tr>
+          <td>Corps</td>
+          <td><input></td>
+          <td><input></td>
+        </tr>
+        <tr>
+          <td>Bouclier</td>
+          <td><input></td>
+          <td><input></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  {{!-- Biography Tab --}}
+    <div class="tab biography" data-group="primary" data-tab="description">
+      {{!-- Editors must receive enriched text data from getData to properly handle rolls --}}
+      {{editor enrichedBiography target="system.biography" engine="prosemirror" button=true editable=editable}}
+    </div>
+
+    {{!-- Owned Items Tab --}}
+    <div class="tab items" data-group="primary" data-tab="items">
+       {{> "systems/cyberpunk-red/templates/actor/parts/actor-items.hbs"}}
+    </div>
+
+
+</form>

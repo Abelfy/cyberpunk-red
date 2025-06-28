@@ -1,0 +1,95 @@
+{
+  "CPR": {
+    "Actor": {
+      "Role": "Rôle",
+      "Humanity": "Humanité",
+      "Health": "Santé",
+      "Armor": "Armure",
+      "Reputation": "Réputation",
+      "StreetCred": "Crédibilité de rue",
+      "Money": "Argent",
+      "MoneyShort": "$"
+    },
+    "Ability": {
+      "Int": {
+        "long": "Intelligence",
+        "abbr": "INT"
+      },
+      "Ref": {
+        "long": "Réflexes",
+        "abbr": "RÉF"
+      },
+      "Dex": {
+        "long": "Dextérité",
+        "abbr": "DEX"
+      },
+      "Tech": {
+        "long": "Technique",
+        "abbr": "TECH"
+      },
+      "Pres": {
+        "long": "Prestance",
+        "abbr": "PRES"
+      },
+      "Vol": {
+        "long": "Volonté",
+        "abbr": "VOL"
+      },
+      "Cha": {
+        "long": "Chance",
+        "abbr": "CHA"
+      },
+      "Mouv": {
+        "long": "Mouvement",
+        "abbr": "MOUV"
+      },
+      "Cor": {
+        "long": "Corps",
+        "abbr": "COR"
+      },
+      "Emp": {
+        "long": "Empathie",
+        "abbr": "EMP"
+      }
+    },
+    "SheetLabels": {
+      "Actor": "Feuille de personnage - CyberPunk Red",
+      "Item": "Objet - CyberPunk Red"
+    },
+    "Item": {
+      "Spell": {
+        "SpellLVL": "Sort de niveau : {level}",
+        "AddLVL": "Ajouter niveau {level}"
+      }
+    },
+    "Effect": {
+      "Source": "Source",
+      "Toggle": "Toggle Effect",
+      "Temporary": "Temporary Effects",
+      "Passive": "Passive Effects",
+      "Inactive": "Inactive Effects"
+    },
+    "Skills": {
+      "Fighting": "Compétences de Combat",
+      "Control": "Compétences de Contrôle",
+      "Body": "Compétences de Corps",
+      "Educative": "Compétences d’Éducation",
+      "Representation": "Compétences de Représentation",
+      "Social": "Compétences de Sociabilité",
+      "Tech": "Compétences de Techniques",
+      "Shooting": "Compétences de Tir",
+      "Vigilance": "Compétences de Vigilance"
+    }
+  },
+  "TYPES": {
+    "Actor": {
+      "character": "Character",
+      "npc": "NPC"
+    },
+    "Item": {
+      "item": "Item",
+      "feature": "Feature",
+      "spell": "Spell"
+    }
+  }
+}

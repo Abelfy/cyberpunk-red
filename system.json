@@ -1,0 +1,49 @@
+{
+  "id": "cyberpunk-red",
+  "title": "Cyberpunk Red",
+  "description": "The Cyberpunk Red system for FoundryVTT!",
+  "authors": [
+    {
+      "name": "Kurian",
+      "discord": "kurian_"
+    }
+  ],
+  "url": "Replace this with a link to your public repository",
+  "license": "LICENSE.txt",
+  "readme": "README.md",
+  "bugs": "Replace this with a link to file issues or tickets",
+  "changelog": "CHANGELOG.md",
+  "media": [
+    {
+      "type": "setup",
+      "url": "systems/cyberpunk-red/assets/cyberpunk-red.png",
+      "thumbnail": "systems/cyberpunk-red/assets/cyberpunk-red.png"
+    }
+  ],
+  "version": "0.0.1",
+  "compatibility": {
+    "minimum": 13,
+    "verified": "13"
+  },
+  "esmodules": ["module/cyberpunk-red.mjs"],
+  "styles": ["css/cyberpunk-red.css"],
+  "languages": [
+    {
+      "lang": "fr",
+      "name": "Français",
+      "path": "lang/fr.json"
+    }
+  ],
+  "packs": [],
+  "packFolders": [],
+  "socket": false,
+  "manifest": "Replace this with a link to the /latest release system.json so people can receive updates after they've installed the system",
+  "download": "This must link to a .zip file of the current version",
+  "background": "systems/cyberpunk-red/assets/cyberpunk-red.png",
+  "grid": {
+    "distance": 5,
+    "units": "ft"
+  } ,
+  "primaryTokenAttribute": "health",
+  "secondaryTokenAttribute": "power"
+}
