@@ -228,9 +228,11 @@
 
   .header {
     grid-area: header;
-    background: white;
+    background-color: #b70000;
     border: 8px solid #b70000;
-    clip-path: polygon(25px 0%,
+    .profile-img {
+      
+      clip-path: polygon(25px 0%,
         /* cut */
         100% 0%,
         100% 100%,
@@ -238,7 +240,7 @@
         0% 25px
         /* cut */
       );
-
+    }
     span {
       font-weight: bold;
       background-color: #b70000;
@@ -294,6 +296,8 @@
 
   input,
   textarea {
+    background-color: #fff;
+    border-radius: 0;
     width: 100%;
   }
 

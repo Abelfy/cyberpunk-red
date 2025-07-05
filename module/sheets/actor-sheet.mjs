@@ -50,7 +50,7 @@ export class CyberPunkRedActorSheet extends foundry.appv1.sheets.ActorSheet {
 
     // Prepare character data and items.
     if (actorData.type == 'character') {
-      this._prepareSkills(context);
+      //this._prepareSkills(context);
       this._prepareItems(context);
       this._prepareCharacterData(context);
     }

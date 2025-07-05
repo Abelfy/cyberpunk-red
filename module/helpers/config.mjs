@@ -1,33 +1,33 @@
 export const CPR = {};
 
 /**
- * The set of Ability Scores used within the system.
+ * The set of Features Scores used within the system.
  * @type {Object}
  */
-CPR.abilities = {
-  int: 'CPR.Ability.Int.long',
-  ref: 'CPR.Ability.Ref.long',
-  dex: 'CPR.Ability.Dex.long',
-  tech: 'CPR.Ability.Tech.long',
-  pres: 'CPR.Ability.Pres.long',
-  vol: 'CPR.Ability.Vol.long',
-  cha: 'CPR.Ability.Cha.long',
-  mouv: 'CPR.Ability.Mouv.long',
-  cor: 'CPR.Ability.Cor.long',
-  emp: 'CPR.Ability.Emp.long'
+CPR.features = {
+  int: 'CPR.Features.Int.long',
+  ref: 'CPR.Features.Ref.long',
+  dex: 'CPR.Features.Dex.long',
+  tech: 'CPR.Features.Tech.long',
+  pres: 'CPR.Features.Pres.long',
+  vol: 'CPR.Features.Vol.long',
+  cha: 'CPR.Features.Cha.long',
+  mouv: 'CPR.Features.Mouv.long',
+  cor: 'CPR.Features.Cor.long',
+  emp: 'CPR.Features.Emp.long'
 };
 
-CPR.abilitiesAbbreviations = {
-  int: 'CPR.Ability.Int.abbr',
-  ref: 'CPR.Ability.Ref.abbr',
-  dex: 'CPR.Ability.Dex.abbr',
-  tech: 'CPR.Ability.Tech.abbr',
-  pres: 'CPR.Ability.Pres.abbr',
-  vol: 'CPR.Ability.Vol.abbr',
-  cha: 'CPR.Ability.Cha.abbr',
-  mouv: 'CPR.Ability.Mouv.abbr',
-  cor: 'CPR.Ability.Cor.abbr',
-  emp: 'CPR.Ability.Emp.abbr'
+CPR.featuresAbbreviations = {
+  int: 'CPR.Features.Int.abbr',
+  ref: 'CPR.Features.Ref.abbr',
+  dex: 'CPR.Features.Dex.abbr',
+  tech: 'CPR.Features.Tech.abbr',
+  pres: 'CPR.Features.Pres.abbr',
+  vol: 'CPR.Features.Vol.abbr',
+  cha: 'CPR.Features.Cha.abbr',
+  mouv: 'CPR.Features.Mouv.abbr',
+  cor: 'CPR.Features.Cor.abbr',
+  emp: 'CPR.Features.Emp.abbr'
 };
 
 

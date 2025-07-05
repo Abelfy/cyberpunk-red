@@ -10,7 +10,7 @@
       "Money": "Argent",
       "MoneyShort": "$"
     },
-    "Ability": {
+    "Features": {
       "Int": {
         "long": "Intelligence",
         "abbr": "INT"
